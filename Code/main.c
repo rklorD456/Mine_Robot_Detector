@@ -33,7 +33,7 @@ void main(void){
 	DC_MOTOR_Init();
 	Init_Timer1();
 	PWM_Timer0_Init();
-	Set_Motor_Speed(215);
+	Set_Motor_Speed(205);
 	while(detect_flag){
 		u16 READING=ADC_Read(Channel_A7);
 		u32 RESULT=((u32)READING*5000)/1024;

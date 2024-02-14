@@ -6401,8 +6401,8 @@ void main(void){
     2a1c:	0e 94 8f 16 	call	0x2d1e	; 0x2d1e <Init_Timer1>
 	PWM_Timer0_Init();
     2a20:	0e 94 3c 16 	call	0x2c78	; 0x2c78 <PWM_Timer0_Init>
-	Set_Motor_Speed(215);
-    2a24:	87 ed       	ldi	r24, 0xD7	; 215
+	Set_Motor_Speed(205);
+    2a24:	8d ec       	ldi	r24, 0xCD	; 205
     2a26:	90 e0       	ldi	r25, 0x00	; 0
     2a28:	0e 94 81 16 	call	0x2d02	; 0x2d02 <Set_Motor_Speed>
     2a2c:	5b c0       	rjmp	.+182    	; 0x2ae4 <main+0x11c>
@@ -6509,7 +6509,7 @@ void main(void){
 	DC_MOTOR_Init();
 	Init_Timer1();
 	PWM_Timer0_Init();
-	Set_Motor_Speed(215);
+	Set_Motor_Speed(205);
 	while(detect_flag){
     2ae4:	80 91 78 00 	lds	r24, 0x0078
     2ae8:	90 91 79 00 	lds	r25, 0x0079
