@@ -157,7 +157,7 @@ LOAD d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x2eaa
+.text           0x00000000     0x2eac
  *(.vectors)
  .vectors       0x00000000       0x54 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -427,56 +427,56 @@ LOAD d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00002990                WDT_ON
  .text.WDT_OFF  0x000029ac       0x1c ./WDT_programe.o
                 0x000029ac                WDT_OFF
- .text.main     0x000029c8      0x13c ./main.o
+ .text.main     0x000029c8      0x140 ./main.o
                 0x000029c8                main
- .text.ir       0x00002b04       0x1e ./main.o
-                0x00002b04                ir
+ .text.ir       0x00002b08       0x24 ./main.o
+                0x00002b08                ir
  .text.DC_MOTOR_Init
-                0x00002b22       0x48 ./motor_program.o
-                0x00002b22                DC_MOTOR_Init
+                0x00002b2c       0x40 ./motor_program.o
+                0x00002b2c                DC_MOTOR_Init
  .text.DC_MOTOR_FORWARD
-                0x00002b6a       0x36 ./motor_program.o
-                0x00002b6a                DC_MOTOR_FORWARD
+                0x00002b6c       0x36 ./motor_program.o
+                0x00002b6c                DC_MOTOR_FORWARD
  .text.DC_MOTOR_BACK
-                0x00002ba0       0x36 ./motor_program.o
-                0x00002ba0                DC_MOTOR_BACK
+                0x00002ba2       0x36 ./motor_program.o
+                0x00002ba2                DC_MOTOR_BACK
  .text.DC_MOTOR_RIGHT
-                0x00002bd6       0x36 ./motor_program.o
-                0x00002bd6                DC_MOTOR_RIGHT
+                0x00002bd8       0x36 ./motor_program.o
+                0x00002bd8                DC_MOTOR_RIGHT
  .text.DC_MOTOR_LEFT
-                0x00002c0c       0x36 ./motor_program.o
-                0x00002c0c                DC_MOTOR_LEFT
+                0x00002c0e       0x36 ./motor_program.o
+                0x00002c0e                DC_MOTOR_LEFT
  .text.DC_MOTOR_Turnoff
-                0x00002c42       0x36 ./motor_program.o
-                0x00002c42                DC_MOTOR_Turnoff
+                0x00002c44       0x36 ./motor_program.o
+                0x00002c44                DC_MOTOR_Turnoff
  .text.PWM_Timer0_Init
-                0x00002c78       0x8a ./motor_program.o
-                0x00002c78                PWM_Timer0_Init
+                0x00002c7a       0x8a ./motor_program.o
+                0x00002c7a                PWM_Timer0_Init
  .text.Set_Motor_Speed
-                0x00002d02       0x1c ./motor_program.o
-                0x00002d02                Set_Motor_Speed
+                0x00002d04       0x1c ./motor_program.o
+                0x00002d04                Set_Motor_Speed
  .text.Init_Timer1
-                0x00002d1e       0x38 ./motor_program.o
-                0x00002d1e                Init_Timer1
+                0x00002d20       0x38 ./motor_program.o
+                0x00002d20                Init_Timer1
  .text.Delay_Seconds
-                0x00002d56       0x60 ./motor_program.o
-                0x00002d56                Delay_Seconds
- .text.libgcc   0x00002db6       0x3e d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
-                0x00002db6                __mulsi3
- .text.libgcc   0x00002df4       0x44 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00002df4                __udivmodsi4
- .text.libgcc   0x00002e38        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x00002e38        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x00002e38        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
- .text.libgcc   0x00002e38       0x38 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x00002e38                __prologue_saves__
- .text.libgcc   0x00002e70       0x36 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x00002e70                __epilogue_restores__
-                0x00002ea6                . = ALIGN (0x2)
+                0x00002d58       0x60 ./motor_program.o
+                0x00002d58                Delay_Seconds
+ .text.libgcc   0x00002db8       0x3e d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00002db8                __mulsi3
+ .text.libgcc   0x00002df6       0x44 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00002df6                __udivmodsi4
+ .text.libgcc   0x00002e3a        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00002e3a        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00002e3a        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00002e3a       0x38 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00002e3a                __prologue_saves__
+ .text.libgcc   0x00002e72       0x36 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00002e72                __epilogue_restores__
+                0x00002ea8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00002ea6        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00002ea6                exit
-                0x00002ea6                _exit
+ .fini9         0x00002ea8        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00002ea8                exit
+                0x00002ea8                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -495,11 +495,11 @@ LOAD d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00002ea6        0x4 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00002ea8        0x4 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00002eaa                _etext = .
+                0x00002eac                _etext = .
 
-.data           0x00800060       0x1a load address 0x00002eaa
+.data           0x00800060       0x1a load address 0x00002eac
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
@@ -601,8 +601,8 @@ LOAD d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                 0x00800084                ir_flag
  *(COMMON)
                 0x00800086                PROVIDE (__bss_end, .)
-                0x00002eaa                __data_load_start = LOADADDR (.data)
-                0x00002ec4                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00002eac                __data_load_start = LOADADDR (.data)
+                0x00002ec6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800086        0x0
                 0x00800086                PROVIDE (__noinit_start, .)
@@ -627,7 +627,7 @@ LOAD d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x2ebc
+.stab           0x00000000     0x2ec8
  *(.stab)
  .stab          0x00000000      0x2ac ./ADC_program.o
  .stab          0x000002ac      0x624 ./DIO_program.o
@@ -648,10 +648,10 @@ LOAD d:/workspace/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
                                 0x288 (size before relaxing)
  .stab          0x0000249c      0x2ac ./WDT_programe.o
                                 0x324 (size before relaxing)
- .stab          0x00002748      0x2e8 ./main.o
-                                0x360 (size before relaxing)
- .stab          0x00002a30      0x48c ./motor_program.o
-                                0x504 (size before relaxing)
+ .stab          0x00002748      0x300 ./main.o
+                                0x378 (size before relaxing)
+ .stab          0x00002a48      0x480 ./motor_program.o
+                                0x4f8 (size before relaxing)
 
 .stabstr        0x00000000     0x117f
  *(.stabstr)

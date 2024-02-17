@@ -17,8 +17,6 @@ void DC_MOTOR_Init(){
 	DIO_SetPinDirection(DC_MOTOR_INPUT,DC_MOTOR_IN4,PIN_OUTPUT);
 
 	DIO_SetPinDirection(DC_MOTOR_PWM,DC_MOTOR_ENA_ENB,PIN_OUTPUT);
-
-	OCR0_Register=255;
 }
 void DC_MOTOR_FORWARD()
 {
