@@ -12,14 +12,20 @@
 #include "Timer_interface.h"
 #include "motor_interface.h"
 
+
 #define ir_pin              PIN_2
 #define line_follower_pin   PIN_7
 #define Puzzer_pin          PIN_0
 
-int detect_flag=1;
-int ir_flag=0;
+unsigned int rand_seed = 1;
+u16 detect_flag=1;
+u16 ir_flag=0;
 
 void ir (void);
+u16 random_direction() {
+    rand_seed = rand_seed * 1103515245 + 12345;
+    return (unsigned int)(rand_seed / 65536) % 2;
+}
 
 void main(void){
 	DC_MOTOR_Init();
@@ -34,7 +40,9 @@ void main(void){
 	EXT_INTERRUPT_VID_INTI();
 	EXT_INTERRUPT_VID_ENABLE(EXT0);
 	Init_Timer1();
+	
 	while(detect_flag){
+		u16 direction = random_direction();
 		EXT0_VID_SET_CALL_BACK(ir);
 		u16 READING=ADC_Read(Channel_A7);
 		u32 RESULT=((u32)READING*5000)/1024;
@@ -51,10 +59,17 @@ void main(void){
 		while (ir_flag) {
 		        DC_MOTOR_BACK();
 		        Delay_Seconds(1);
-		        DC_MOTOR_LEFT();
-		        Delay_Seconds(1);
-		    	EXT_INTERRUPT_VID_ENABLE(EXT0);
-		        ir_flag = 0;
+			if (direction==1){
+				DC_MOTOR_LEFT();
+			        Delay_Seconds(1);
+		    	        EXT_INTERRUPT_VID_ENABLE(EXT0);
+		                ir_flag = 0;}
+			else{
+				DC_MOTOR_RIGHT();
+			        Delay_Seconds(1);
+		    	        EXT_INTERRUPT_VID_ENABLE(EXT0);
+		                ir_flag = 0;}
+			}
 		    }
 	}
 
